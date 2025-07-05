@@ -1,0 +1,94 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Botones */
+#fetch-btn, #axios-btn {
+    background-color: #ffcb05; 
+    color: #2a75bb;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#fetch-btn:hover, #axios-btn:hover {
+    background-color: #e6b800;
+}
+
+/* Contenedor de datos */
+#data-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* Tarjetas de Pokémon */
+.pokemon-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pokemon-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.pokemon-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.pokemon-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Mensaje de error */
+.error {
+    color: #dc3545;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #fetch-btn, #axios-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    #data-container {
+        grid-template-columns: 1fr;
+    }
+}
